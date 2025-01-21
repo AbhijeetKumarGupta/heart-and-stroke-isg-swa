@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import styles from "./surveyQuestion.module.css";
 
 export default function SurveyQuestion(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     { currentQuestion }: { currentQuestion: { title: string, nextQuestion: any } }
 ) {
     const router = useRouter();

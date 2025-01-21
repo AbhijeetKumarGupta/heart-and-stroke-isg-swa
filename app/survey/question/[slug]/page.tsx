@@ -12,6 +12,7 @@ export async function generateStaticParams() {
 
   const questions = data.items;
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const paths = questions.map((question: any) => ({
     slug: question?.fields?.slug,
   }));
@@ -21,7 +22,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Question({ params }: { params: { slug: string } }) {
+export default async function Question({ params }: { params: Promise<{ slug: string }> }) {
   const survey = await client.getEntries({
     content_type: 'survey',
     limit: 1
@@ -45,6 +46,7 @@ export default async function Question({ params }: { params: { slug: string } })
     );
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const question = data.items[0]?.fields as { title: string, nextQuestion: any };
 
   return (

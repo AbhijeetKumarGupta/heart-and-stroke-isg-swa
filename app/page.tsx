@@ -10,6 +10,7 @@ export default async function Home() {
     limit: 1
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const surveyData = data?.items?.[0]?.fields as { title: string, firstQuestion: any, description: string };;
 
   return (
