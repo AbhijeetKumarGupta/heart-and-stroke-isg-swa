@@ -1,0 +1,59 @@
+.questionContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    height: 45vh;
+}
+
+.questionContainer h3{
+    margin-top: 20px;
+    color: black;
+}
+
+.questionDescription {
+    font-size: 0.8rem;
+    color: #777;
+    margin: 5px 0;
+}
+
+.optionsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    overflow-y: scroll;
+}
+
+.optionLabel {
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.optionInput {
+    margin-right: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 48%;
+}
+
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.singleButton {
+    justify-content: flex-end;
+    margin-top: 10px;
+}
