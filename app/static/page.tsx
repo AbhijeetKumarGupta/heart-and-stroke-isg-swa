@@ -3,7 +3,7 @@ import RoutingButton from '@/components/RoutingButton/RoutingButton';
 
 import styles from './app.module.css';
 
-export default async function Home() {
+export default async function Static() {
 
   const data = await client.getEntries({
     content_type: 'survey',
@@ -32,11 +32,13 @@ export default async function Home() {
           className={styles.startButton}
         />
         <RoutingButton
-          route="/static"
-          buttonText='Static ISR Welcome page'
+          route="/"
+          buttonText='Static SSR Welcome page'
           className={styles.startButton}
         />
       </div>
     </div>
   );
 }
+
+export const revalidate = 30;
